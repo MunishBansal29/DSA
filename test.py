@@ -1,0 +1,1 @@
+print("Welcome to the DSA (Data Structure and Algorithm) course !")
