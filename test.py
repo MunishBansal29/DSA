@@ -1,1 +1,5 @@
+print("\n")
 print("Welcome to the DSA (Data Structure and Algorithm) course !")
+print("\n")
+print("This is a Python based course !!")
+print("\n")
