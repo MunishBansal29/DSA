@@ -90,3 +90,64 @@ print("Nth number of the Fibonacci series for the given N is: ", fib_rec(6), "\n
 n = 6
 for i in range(n+1):
     print(f"{i} Fibonacci term is: ",fib_rec(i))
+
+
+######################
+#### Finding the GCD (Greates common divisor) using The Euclidean algorithm
+### The Euclidean algorithm is a way to find the greatest common divisor of two positive integers. 
+# GCD of two numbers is the largest number that divides both of them. 
+# A simple way to find GCD is to factorize both numbers and multiply common prime factors.
+### if we divide the smaller number, the algorithm stops when we find the remainder 0.
+
+
+def gcd(a,b):
+    if b == 0:
+        return a
+    return gcd(b, a%b)
+
+print(gcd(12,42))
+print(gcd(48,24))
+########################################################################
+
+
+###### productofArray
+## Write a function called productOfArray which takes in an array of numbers and returns the product of them all.
+
+def productofarray(arr):
+    product = 1
+    for i in arr:
+        product = product * i
+    return product
+
+a = [1,2,3,5,8,11]
+print(productofarray(a))
+
+
+######## Permutations
+# A Python program to print all 
+# permutations of given length 
+from itertools import permutations 
+  
+# Get all permutations of length 2 
+# and length 2 
+perm = permutations([1, 2, 3], 2) 
+# Print the obtained permutations 
+for i in list(perm): 
+    print (i) 
+
+
+# A Python program to print all 
+# combinations of given length
+from itertools import combinations
+  
+# Get all combinations of [1, 2, 3]
+# and length 2
+comb = combinations([1, 2, 3], 2)
+  
+# Print the obtained combinations
+for i in list(comb):
+    print (i)
+
+## REVERSE SOLUTION
+str = "This is my string"
+print(str[-1:])
