@@ -27,3 +27,7 @@ print(str[1:-1]) #ell
 ## REVERSE STRING
 str = "This is my string"
 print(str[::-1]) #i.e. step if negative
+
+#sorting
+ls = [11,21,3,4,4,15,5,6,11,8]
+print(sorted(ls)) #does retain the duplicates in the sorted list: [3, 4, 4, 5, 6, 8, 11, 11, 15, 21]

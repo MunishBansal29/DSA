@@ -1,6 +1,8 @@
-#Dictionay is unordered, changeable and indexed (on keys)
+#Dictionary is unordered, changeable and indexed (on keys)
 from asyncio import new_event_loop
 from hashlib import new
+from collections import Counter
+from itertools import count
 
 
 myDict = dict() #empty dictionary
@@ -83,6 +85,35 @@ if "Name" in dynamicDict.keys():
 
 
 #oneDict.update(otherDict) -> updates from otherDict to oneDict, if keys exist then update else inserted
+
+# Mapping key values to Dictionary
+# Using dictionary comprehension
+  
+# initializing list
+test_list = [{'name' : 'Manjeet', 'age' : 23}, 
+             {'name' : 'Akshat',  'age' : 22},
+             {'name' : 'Nikhil', 'age' : 21}]
+  
+# printing original list
+print("The original list is : " + str(test_list))
+  
+# Mapping key values to Dictionary
+# Using dictionary comprehension
+res = {sub['name'] : sub['age'] for sub in test_list}
+  
+# printing result 
+print("The flattened dictionary is : " + str(dict(res))) 
+
+
+#quering based upon key or value
+ls = [1,1,2,3,6,7,3,7,8,9,1]
+dict = Counter(ls)
+print(dict) #Counter({1: 3, 3: 2, 7: 2, 2: 1, 6: 1, 8: 1, 9: 1})
+print(dict.get(3)) #gives the value at the specified key
+max_key = max(dict) #will give the max key
+
+max_val_key = max(dict, key = dict.get) #this will give KEY where value is the max (in this case, max value is 3 for key = 1, hence result is 1
+print(dict[max_val_key]) #prints the value 3 where value is max.
 
 
 
